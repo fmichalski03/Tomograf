@@ -13,7 +13,6 @@ def convert_image_to_ubyte(img):
 def save_as_dicom(file_name, img, patient_data):
     img_converted = convert_image_to_ubyte(img)
     
-    # Populate required values for file meta information
     meta = Dataset()
     meta.MediaStorageSOPClassUID = CTImageStorage
     meta.MediaStorageSOPInstanceUID = generate_uid()
